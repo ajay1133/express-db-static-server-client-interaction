@@ -1,0 +1,16 @@
+<DOCTYPE html>
+    <head>
+        <title>Fetch url response</title>
+        <script src="index.js"></script>
+    </head>
+    <body>
+        <div id="root">
+            <script type="text/javascript">
+                const url = (window || {}).location;
+                const urlObj = new URL(url);
+                const paramsObj = new URLSearchParams(urlObj.search);
+                (async () => await init(paramsObj))();
+            </script>
+        </div>
+    </body>    
+</html>
